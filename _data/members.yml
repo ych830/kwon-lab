@@ -1,0 +1,101 @@
+# 연구실 구성원 (교수님 제외 — 교수님은 professor.yml).
+# 새 사람을 넣으려면 "- name:" 부터 한 덩어리를 복사해 아래에 붙이고 내용만 바꾼다.
+#
+# role: phd(박사과정) · ms(석사과정) · intern(학부연구생) · alumni(졸업생)
+# photo: assets/img/people/ 에 올린 사진 파일 이름. 비우면 이름 글자로 대신 표시.
+# 졸업하면 role 을 alumni 로 바꾸고 degree·now 를 채운다.
+
+- name:
+    ko: 홍길동
+    en: Gildong Hong
+  role: phd
+  since: 2024
+  photo: ""
+  email: ""
+  homepage: ""
+  interests:
+    ko: 멀티모달 학습, 시각-언어 모델
+    en: Multimodal learning, vision-language models
+
+- name:
+    ko: 김하늘
+    en: Haneul Kim
+  role: phd
+  since: 2025
+  photo: ""
+  email: ""
+  homepage: ""
+  interests:
+    ko: 효율적인 딥러닝, 모델 경량화
+    en: Efficient deep learning, model compression
+
+- name:
+    ko: 이서준
+    en: Seojun Lee
+  role: ms
+  since: 2025
+  photo: ""
+  email: ""
+  homepage: ""
+  interests:
+    ko: 제조 데이터 이상 탐지
+    en: Anomaly detection in manufacturing data
+
+- name:
+    ko: 박지민
+    en: Jimin Park
+  role: ms
+  since: 2025
+  photo: ""
+  email: ""
+  homepage: ""
+  interests:
+    ko: 신뢰할 수 있는 AI, 불확실성 추정
+    en: Trustworthy AI, uncertainty estimation
+
+- name:
+    ko: 최유나
+    en: Yuna Choi
+  role: ms
+  since: 2026
+  photo: ""
+  email: ""
+  homepage: ""
+  interests:
+    ko: 대규모 언어 모델 응용
+    en: Applications of large language models
+
+- name:
+    ko: 정민호
+    en: Minho Jung
+  role: intern
+  since: 2026
+  photo: ""
+  email: ""
+  homepage: ""
+  interests:
+    ko: 컴퓨터 비전
+    en: Computer vision
+
+- name:
+    ko: 윤소희
+    en: Sohee Yoon
+  role: intern
+  since: 2026
+  photo: ""
+  email: ""
+  homepage: ""
+  interests:
+    ko: 강화학습
+    en: Reinforcement learning
+
+- name:
+    ko: 강도윤
+    en: Doyun Kang
+  role: alumni
+  degree:
+    ko: 석사 (2025)
+    en: M.S. (2025)
+  now:
+    ko: AI 스타트업 연구원
+    en: Research Scientist at an AI startup

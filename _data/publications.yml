@@ -1,0 +1,69 @@
+# 논문 목록. 연도별로 자동 정렬되므로 순서는 신경 쓰지 않아도 된다.
+# 새 논문은 "- title:" 부터 한 덩어리를 복사해 맨 위에 붙이고 내용만 바꾼다.
+#
+# type: journal(저널) · conference(국제학술대회) · domestic(국내) · preprint(프리프린트)
+# pdf / code / project: 링크 주소. 비우면 버튼이 안 나온다.
+#   PDF 파일을 직접 올리려면 assets/papers/ 에 올리고 pdf: assets/papers/파일이름.pdf 로 적는다.
+# note: 수상·발표 형태 등 짧은 표시 (예: Oral, Best Paper). 없으면 비운다.
+#
+# ※ 아래는 화면 모양을 보기 위한 예시다. 실제 논문으로 바꿀 것.
+
+- title: "Lightweight Cross-Modal Attention for Efficient Vision-Language Understanding"
+  authors: "Gildong Hong, Haneul Kim, OOO"
+  venue: "Example International Conference on AI (예시)"
+  year: 2026
+  type: conference
+  pdf: ""
+  code: ""
+  project: ""
+  note: "Oral"
+
+- title: "Uncertainty-Aware Anomaly Detection for Smart Manufacturing Lines"
+  authors: "Seojun Lee, Jimin Park, OOO"
+  venue: "Example Journal of Intelligent Manufacturing (예시)"
+  year: 2026
+  type: journal
+  pdf: ""
+  code: ""
+  project: ""
+  note: ""
+
+- title: "Data-Efficient Fine-Tuning of Large Language Models for Domain-Specific Tasks"
+  authors: "Yuna Choi, OOO"
+  venue: "arXiv (예시)"
+  year: 2026
+  type: preprint
+  pdf: ""
+  code: ""
+  project: ""
+  note: ""
+
+- title: "Structured Pruning with Knowledge Distillation for On-Device Vision Models"
+  authors: "Haneul Kim, Gildong Hong, OOO"
+  venue: "Example Conference on Computer Vision (예시)"
+  year: 2025
+  type: conference
+  pdf: ""
+  code: ""
+  project: ""
+  note: ""
+
+- title: "제조 공정 시계열 데이터를 위한 자기지도 이상 탐지"
+  authors: "이서준, OOO"
+  venue: "한국정보과학회 학술발표논문집 (예시)"
+  year: 2025
+  type: domestic
+  pdf: ""
+  code: ""
+  project: ""
+  note: "우수논문상"
+
+- title: "Robust Representation Learning under Distribution Shift"
+  authors: "Doyun Kang, OOO"
+  venue: "Example Transactions on Machine Learning (예시)"
+  year: 2024
+  type: journal
+  pdf: ""
+  code: ""
+  project: ""
+  note: ""

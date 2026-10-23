@@ -1,0 +1,120 @@
+---
+layout: default
+---
+{%- assign lang = page.lang | default: "ko" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign d = site.data.i18n.display -%}
+{%- assign lab = site.data.lab -%}
+{%- assign alumni = site.data.members | where: "role", "alumni" -%}
+{%- assign member_count = site.data.members.size | minus: alumni.size | plus: 1 -%}
+
+<section class="hero">
+  {%- assign lab_name = lab.name[lang] %}
+  {% include media.html dir="" file=lab.hero_image alt=lab_name class="hero-media" %}
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <div>
+      <p class="hero-eyebrow">{{ lab.university.en }}</p>
+      <h1>{{ lab.tagline[lang] }}</h1>
+      <div class="hero-actions">
+        <a class="btn btn-brand" href="{% include url.html ref='research' %}">{{ t.home.cta_research }}</a>
+        <a class="btn btn-line-light" href="{% include url.html ref='join' %}">{{ t.home.cta_join }} <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    {%- if lab.hero_caption[lang] and lab.hero_caption[lang] != "" %}
+    <p class="hero-caption">{{ lab.hero_caption[lang] }}</p>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="band band-brand">
+  <div class="container grid about">
+    <p class="about-display" aria-hidden="true">We are<br>{{ lab.short_name }}</p>
+    <div class="about-text">
+      <h2>{{ lab.name[lang] }}</h2>
+      <p>{{ lab.intro[lang] }}</p>
+      <a class="link-arrow" href="{% include url.html ref='people' %}">{{ t.nav.people }} <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="band band-ink stats-band">
+  <dl class="container grid stats">
+    <div class="col-3"><dt>{{ t.home.stat_areas }}</dt><dd>{{ site.data.research.areas.size }}</dd></div>
+    <div class="col-3"><dt>{{ t.home.stat_members }}</dt><dd>{{ member_count }}</dd></div>
+    <div class="col-3"><dt>{{ t.home.stat_pubs }}</dt><dd>{{ site.data.publications.size }}</dd></div>
+    <div class="col-3"><dt>{{ t.roles.alumni }}</dt><dd>{{ alumni.size }}</dd></div>
+  </dl>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include section-head.html en=d.research ko=t.home.research_title more="research" %}
+    <ol class="grid cards">
+      {%- for area in site.data.research.areas %}
+      <li class="col-3 card">
+        <a href="{% include url.html ref='research' %}#area-{{ forloop.index }}">
+          {%- assign area_title = area.title[lang] %}
+          <div class="card-media">{% include media.html dir="research/" file=area.image alt=area_title %}</div>
+          <p class="card-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</p>
+          <h3>{{ area.title[lang] }}</h3>
+          <p class="card-text">{{ area.summary[lang] }}</p>
+        </a>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-flush-top">
+  <div class="container">
+    {% include section-head.html en=d.gallery ko=t.home.gallery_title more="gallery" %}
+  </div>
+  {%- assign photos = site.data.gallery | sort: "date" | reverse %}
+  <ul class="photo-strip">
+    {%- for g in photos limit: 8 %}
+    <li>
+      <a href="{% include url.html ref='gallery' %}">
+        {%- assign cap = g[lang] %}
+        {% include media.html dir="gallery/" file=g.image alt=cap %}
+        <span class="photo-cap">{{ g[lang] }}</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% include section-head.html en=d.news ko=t.home.news_title more="news" %}
+    {%- assign news = site.data.news | sort: "date" | reverse %}
+    <ul class="grid cards">
+      {%- for item in news limit: 3 %}
+      {% include news-item.html item=item card=true %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band band-soft">
+  <div class="container grid">
+    <div class="col-12">{% include section-head.html en=d.publications ko=t.home.pubs_title more="publications" %}</div>
+    {%- assign pubs = site.data.publications | sort: "year" | reverse %}
+    <ol class="pub-list pub-list-home">
+      {%- for pub in pubs limit: 3 %}
+      {% include pub.html pub=pub show_year=true %}
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+{%- if lab.recruiting %}
+<section class="band band-brand recruit">
+  <div class="container">
+    <p class="recruit-display" aria-hidden="true">{{ d.join }}</p>
+    <h2>{{ t.home.recruit_title }}</h2>
+    <p class="recruit-text">{{ t.home.recruit_text }}</p>
+    <a class="btn btn-ink" href="{% include url.html ref='join' %}">{{ t.home.recruit_cta }} <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+{%- endif %}

@@ -1,0 +1,84 @@
+---
+layout: page-hero
+---
+{%- assign lang = page.lang | default: "ko" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign prof = site.data.professor -%}
+{%- assign other = "en" -%}{% if lang == "en" %}{% assign other = "ko" %}{% endif -%}
+<section class="section">
+  <div class="container">
+    <article class="grid prof">
+      <div class="prof-photo">{% include avatar.html person=prof size="lg" %}</div>
+      <div class="prof-body">
+        <p class="prof-title">{{ prof.title[lang] }}</p>
+        <h2>{{ prof.name[lang] }}</h2>
+        <p class="name-alt">{{ prof.name[other] }}</p>
+        <p class="prof-bio">{{ prof.bio[lang] }}</p>
+        <ul class="prof-meta">
+          {%- if prof.email and prof.email != "" %}<li><span>{{ t.email }}</span><a href="mailto:{{ prof.email }}">{{ prof.email }}</a></li>{% endif %}
+          {%- if prof.office[lang] and prof.office[lang] != "" %}<li><span>Office</span>{{ prof.office[lang] }}</li>{% endif %}
+        </ul>
+        <p class="text-links">
+          {%- for link in prof.links %}{% if link.url and link.url != "" %}<a href="{{ link.url }}">{{ link.label }} ↗</a>{% endif %}{% endfor -%}
+        </p>
+        <div class="cv-grid">
+          <div>
+            <h3>{{ t.people.education }}</h3>
+            <ul class="cv-list">
+              {%- for e in prof.education %}<li><span>{% if lang == "en" %}{{ e.year_en | default: e.year }}{% else %}{{ e.year }}{% endif %}</span>{{ e[lang] }}</li>{% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h3>{{ t.people.career }}</h3>
+            <ul class="cv-list">
+              {%- for c in prof.career %}<li><span>{% if lang == "en" %}{{ c.year_en | default: c.year }}{% else %}{{ c.year }}{% endif %}</span>{{ c[lang] }}</li>{% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+{%- assign roles = "phd,ms,intern" | split: "," %}
+{%- for role in roles %}
+{%- assign group = site.data.members | where: "role", role %}
+{%- if group.size > 0 %}
+<section class="section section-tight">
+  <div class="container">
+    {%- assign role_en = site.data.i18n.en.roles[role] %}{% assign role_ko = t.roles[role] %}
+    {% include section-head.html en=role_en ko=role_ko %}
+    <ul class="grid member-grid">
+      {%- for m in group %}
+      <li class="col-3 member">
+        {% include avatar.html person=m %}
+        <p class="member-name">{{ m.name[lang] }}</p>
+        <p class="member-alt">{{ m.name[other] }}{% if m.since %} · {{ m.since }}–{% endif %}</p>
+        {%- if m.interests[lang] and m.interests[lang] != "" %}
+        <p class="member-interests">{{ m.interests[lang] }}</p>
+        {%- endif %}
+        <p class="text-links">
+          {%- if m.email and m.email != "" %}<a href="mailto:{{ m.email }}">{{ t.email }}</a>{% endif -%}
+          {%- if m.homepage and m.homepage != "" %}<a href="{{ m.homepage }}">{{ t.homepage }} ↗</a>{% endif -%}
+        </p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}
+{%- endfor %}
+
+{%- assign alumni = site.data.members | where: "role", "alumni" %}
+{%- if alumni.size > 0 %}
+<section class="section section-tight">
+  <div class="container grid">
+    <div class="col-12">{% include section-head.html en=site.data.i18n.en.people.alumni ko=t.people.alumni %}</div>
+    <ul class="alumni-list">
+      {%- for a in alumni %}
+      <li><strong>{{ a.name[lang] }}</strong><span>{{ a.degree[lang] }}</span><span>{{ a.now[lang] }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}

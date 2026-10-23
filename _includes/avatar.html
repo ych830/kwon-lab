@@ -1,0 +1,13 @@
+{%- comment -%} 사진이 있으면 사진, 없으면 이름 글자. 사용: {% include avatar.html person=m size="lg" %} {%- endcomment -%}
+{%- assign _person = include.person -%}
+{%- if _person.photo and _person.photo != "" -%}
+<img class="avatar {{ include.size }}" src="{{ '/assets/img/people/' | append: _person.photo | relative_url }}" alt="{{ _person.name[lang] }}" loading="lazy">
+{%- else -%}
+{%- if lang == "ko" -%}
+{%- assign _initials = _person.name.ko | slice: 1, 2 -%}
+{%- else -%}
+{%- assign _words = _person.name.en | split: " " -%}
+{%- capture _initials -%}{%- for _w in _words limit: 2 -%}{{ _w | slice: 0 }}{%- endfor -%}{%- endcapture -%}
+{%- endif -%}
+<span class="avatar avatar-initials {{ include.size }}" aria-hidden="true">{{ _initials }}</span>
+{%- endif -%}

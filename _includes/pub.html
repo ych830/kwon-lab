@@ -1,0 +1,17 @@
+{%- assign _pub = include.pub -%}
+{%- assign _authors = _pub.authors -%}
+{%- for _name in site.data.lab.highlight_authors -%}
+{%- capture _bold %}<strong>{{ _name }}</strong>{% endcapture -%}
+{%- assign _authors = _authors | replace: _name, _bold -%}
+{%- endfor -%}
+<li class="pub" data-type="{{ _pub.type }}">
+  <p class="pub-top"><span class="pub-type">{{ t.pub_types[_pub.type] }}</span>{% if include.show_year %}<span class="pub-yr">{{ _pub.year }}</span>{% endif %}{% if _pub.note and _pub.note != "" %}<span class="pub-note">{{ _pub.note }}</span>{% endif %}</p>
+  <p class="pub-title">{{ _pub.title }}</p>
+  <p class="pub-authors">{{ _authors }}</p>
+  <p class="pub-venue">{{ _pub.venue }}</p>
+  <p class="pub-links">
+    {%- if _pub.pdf and _pub.pdf != "" %}{% assign _href = _pub.pdf %}{% unless _href contains "://" %}{% assign _href = _href | prepend: "/" | relative_url %}{% endunless %}<a href="{{ _href }}">PDF ↗</a>{% endif -%}
+    {%- if _pub.code and _pub.code != "" %}<a href="{{ _pub.code }}">Code ↗</a>{% endif -%}
+    {%- if _pub.project and _pub.project != "" %}<a href="{{ _pub.project }}">Project ↗</a>{% endif -%}
+  </p>
+</li>

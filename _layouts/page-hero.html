@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- comment -%} 홈을 뺀 나머지 페이지 공통: 노란 제목 띠 + 본문 {%- endcomment -%}
+{%- assign lang = page.lang | default: "ko" -%}
+{%- assign t = site.data.i18n[lang] -%}
+<section class="page-hero">
+  <div class="container">
+    <p class="page-display" aria-hidden="true">{{ site.data.i18n.display[page.ref] }}</p>
+    <h1>{{ t.nav[page.ref] }}</h1>
+    {%- if t[page.ref].lead %}
+    <p class="page-lead">{{ t[page.ref].lead }}</p>
+    {%- endif %}
+  </div>
+  <span class="vline" aria-hidden="true"></span>
+</section>
+{{ content }}

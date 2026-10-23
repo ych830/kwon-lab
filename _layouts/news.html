@@ -1,0 +1,15 @@
+---
+layout: page-hero
+---
+{%- assign lang = page.lang | default: "ko" -%}
+{%- assign t = site.data.i18n[lang] -%}
+<section class="section">
+  <div class="container">
+    {%- assign news = site.data.news | sort: "date" | reverse %}
+    <ul class="news-list">
+      {%- for item in news %}
+      {% include news-item.html item=item %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

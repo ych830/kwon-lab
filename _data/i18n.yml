@@ -1,0 +1,147 @@
+# 화면에 고정으로 나오는 글자(메뉴 이름, 제목, 버튼)를 언어별로 모아 둔 곳.
+# 내용(구성원·논문 등)이 아니라 틀에 붙은 글자를 바꿀 때만 고친다.
+# 영어 대문자 큰 제목(예: RESEARCH)은 두 언어 화면에 똑같이 나온다 → display 아래에 있다.
+
+display:
+  research: RESEARCH
+  people: PEOPLE
+  publications: PUBLICATIONS
+  news: NEWS
+  gallery: GALLERY
+  join: JOIN US
+
+ko:
+  skip: 본문으로 건너뛰기
+  menu: 메뉴 열기
+  draft_notice: 지금 보이는 사진·구성원·논문·소식은 화면 확인용 예시입니다.
+  more: 전체 보기
+  contact: 연락처
+  links: 바로가기
+  email: 이메일
+  homepage: 홈페이지
+  photo_slot: 사진 자리
+  nav:
+    home: 홈
+    research: 연구
+    people: 구성원
+    publications: 논문
+    news: 소식
+    gallery: 갤러리
+    join: 함께하기
+  home:
+    cta_research: 연구 분야 보기
+    cta_join: 학생 모집 안내
+    research_title: 연구 분야
+    news_title: 연구실 소식
+    gallery_title: 연구실의 순간들
+    pubs_title: 최근 논문
+    recruit_title: 함께 연구할 학생을 찾습니다
+    recruit_text: 석사·박사과정과 학부연구생을 모집하고 있습니다.
+    recruit_cta: 지원 방법 보기
+    stat_areas: 연구 분야
+    stat_members: 구성원
+    stat_pubs: 논문
+  research:
+    lead: 우리 연구실이 풀고 있는 문제들입니다.
+    projects_title: 연구 과제
+  people:
+    lead: 함께 연구하는 사람들입니다.
+    education: 학력
+    career: 경력
+    alumni: 졸업생
+  roles:
+    phd: 박사과정
+    ms: 석사과정
+    intern: 학부연구생
+    alumni: 졸업생
+  publications:
+    lead: 연구실에서 발표한 논문입니다.
+  pubs:
+    filter: 논문 종류로 거르기
+    all: 전체
+    empty: 해당하는 논문이 없습니다.
+  pub_types:
+    journal: 저널
+    conference: 국제학술대회
+    domestic: 국내
+    preprint: 프리프린트
+  news:
+    lead: 연구실의 새 소식입니다.
+  gallery:
+    lead: 학회 발표, 세미나, 연구실 생활을 사진으로 남깁니다.
+  join:
+    positions_title: 모집 분야
+    looking_title: 이런 분을 찾습니다
+    offer_title: 연구실이 지원합니다
+    apply_title: 지원 방법
+    contact_title: 연락처 · 오시는 길
+    map: 지도에서 보기
+    mail_cta: 메일 보내기
+
+en:
+  skip: Skip to content
+  menu: Open menu
+  draft_notice: The photos, members, publications, and news shown here are placeholders for preview.
+  more: View all
+  contact: Contact
+  links: Links
+  email: Email
+  homepage: Homepage
+  photo_slot: Photo
+  nav:
+    home: Home
+    research: Research
+    people: People
+    publications: Publications
+    news: News
+    gallery: Gallery
+    join: Join Us
+  home:
+    cta_research: Our research
+    cta_join: Join the lab
+    research_title: Research Areas
+    news_title: Lab News
+    gallery_title: Moments in the Lab
+    pubs_title: Recent Publications
+    recruit_title: We are looking for new members
+    recruit_text: Openings for M.S./Ph.D. students and undergraduate interns.
+    recruit_cta: How to apply
+    stat_areas: Research areas
+    stat_members: Members
+    stat_pubs: Publications
+  research:
+    lead: The problems we are working on.
+    projects_title: Research Projects
+  people:
+    lead: The people behind our research.
+    education: Education
+    career: Experience
+    alumni: Alumni
+  roles:
+    phd: Ph.D. Students
+    ms: M.S. Students
+    intern: Undergraduate Interns
+    alumni: Alumni
+  publications:
+    lead: Papers published by our lab.
+  pubs:
+    filter: Filter by type
+    all: All
+    empty: No publications in this category.
+  pub_types:
+    journal: Journal
+    conference: Conference
+    domestic: Domestic
+    preprint: Preprint
+  news:
+    lead: What's happening in the lab.
+  gallery:
+    lead: Conference talks, seminars, and everyday life in the lab.
+  join:
+    positions_title: Open Positions
+    looking_title: Who We Are Looking For
+    offer_title: What We Offer
+    apply_title: How to Apply
+    contact_title: Contact & Location
+    map: Open in Google Maps
+    mail_cta: Send an email

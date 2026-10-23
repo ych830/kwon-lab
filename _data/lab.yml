@@ -1,0 +1,46 @@
+# 연구실 기본 정보 — 머리말·바닥글·홈 화면에 쓰인다.
+# ko: 한국어 화면에 나오는 글, en: 영어 화면에 나오는 글.
+
+# true 면 모든 페이지 맨 위에 "예시 내용입니다" 띠가 나온다. 실제 내용으로 다 바꾼 뒤 false 로 바꾼다.
+draft: true
+
+name:
+  ko: OOO 연구실
+  en: OOO Lab
+short_name: OOO Lab    # 머리말 왼쪽 위에 나오는 이름
+
+# 홈 첫 화면을 꽉 채우는 큰 사진(교수님 학회 발표, 연구실 단체 사진 등). assets/img/ 에 올린 파일 이름.
+# 지금은 사진 자리를 보여 주는 예시 그림이다. 가로로 긴 사진(16:9, 가로 1920px 이상)이 잘 맞는다
+hero_image: sample-hero.svg
+hero_caption:          # 사진 오른쪽 아래에 작게 나오는 설명. 비우면 안 나온다
+  ko: 2026 국제학술대회 발표 (예시)
+  en: Talk at an international conference, 2026 (example)
+
+university:
+  ko: OO대학교
+  en: OO University
+department:            # 비워 두면 화면에 안 나온다
+  ko: ""
+  en: ""
+
+tagline:
+  ko: 사람과 산업에 실제로 쓰이는 인공지능을 연구합니다
+  en: Building AI that works in the real world
+intro:
+  ko: OOO 연구실은 OO대학교에서 기계학습과 인공지능을 연구합니다. 데이터에서 배우는 모델을 만들고, 그 모델이 현실의 문제를 풀도록 다듬는 일을 합니다.
+  en: OOO Lab at OO University studies machine learning and artificial intelligence. We build models that learn from data and refine them to solve real-world problems.
+
+email: professor@university.ac.kr   # 대표 연락 메일 (예시 주소 — 실제 주소로 바꿀 것)
+address:
+  ko: (학교 주소)
+  en: (University address)
+room:                  # 건물·호실. 비워 두면 안 나온다
+  ko: ""
+  en: ""
+
+# 학생 모집 중이면 true — 홈 화면에 모집 띠가 나온다
+recruiting: true
+
+# 논문 저자 목록에서 굵게 보일 이름 (교수님·연구실 구성원)
+highlight_authors:
+  - OOO

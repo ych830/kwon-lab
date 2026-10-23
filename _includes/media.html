@@ -1,0 +1,10 @@
+{%- comment -%}
+사진이 있으면 사진, 없으면 노란 "사진 자리" 표시.
+사용: {% include media.html dir="gallery/" file=g.image alt=cap class="..." %} (alt 에 대괄호를 쓸 수 없으므로 미리 assign)
+dir 은 assets/img/ 아래 폴더, file 은 데이터 파일에 적힌 파일 이름.
+{%- endcomment -%}
+{%- if include.file and include.file != "" -%}
+<img class="media {{ include.class }}" src="{{ '/assets/img/' | append: include.dir | append: include.file | relative_url }}" alt="{{ include.alt | escape }}" loading="lazy">
+{%- else -%}
+<span class="media media-empty {{ include.class }}" role="img" aria-label="{{ t.photo_slot }}"><span>{{ t.photo_slot }}</span></span>
+{%- endif -%}

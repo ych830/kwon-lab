@@ -1,0 +1,45 @@
+# 갤러리(사진첩). 날짜순으로 자동 정렬된다(최신이 위). 홈 화면에는 최근 8장이 나온다.
+# 새 사진: assets/img/gallery/ 에 사진을 올리고, "- date:" 부터 한 덩어리를 복사해 맨 위에 붙인다.
+# image: 올린 사진 파일 이름. 정사각형으로 잘려 보이므로 가운데에 주인공이 오는 사진이 좋다.
+#
+# ※ 아래는 사진 자리를 보여 주는 예시다.
+
+- date: 2026-10-15
+  image: sample-1.svg
+  ko: 국제학술대회 구두 발표
+  en: Oral presentation at an international conference
+
+- date: 2026-09-20
+  image: sample-2.svg
+  ko: 연구실 정기 세미나
+  en: Weekly lab seminar
+
+- date: 2026-08-28
+  image: sample-3.svg
+  ko: 산학협력 기업 방문
+  en: Visit to an industry partner
+
+- date: 2026-07-10
+  image: sample-4.svg
+  ko: 학생 포스터 발표
+  en: Student poster session
+
+- date: 2026-05-17
+  image: sample-5.svg
+  ko: 연구실 MT
+  en: Lab retreat
+
+- date: 2026-02-20
+  image: sample-6.svg
+  ko: 2026년 2월 졸업식
+  en: Commencement, February 2026
+
+- date: 2025-11-10
+  image: sample-7.svg
+  ko: 우수논문상 수상
+  en: Best Paper Award
+
+- date: 2025-09-01
+  image: sample-8.svg
+  ko: 새 연구실 공간
+  en: Our new lab space

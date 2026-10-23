@@ -1,0 +1,46 @@
+# 교수님 소개 — 구성원(People) 페이지 맨 위 카드.
+# photo: assets/img/people/ 폴더에 올린 사진 파일 이름 (예: professor.jpg). 비워 두면 이름 글자로 대신 표시한다.
+
+name:
+  ko: OOO
+  en: OOO                 # 영문 표기 확인 필요
+title:
+  ko: 교수
+  en: Professor
+photo: ""
+email: professor@university.ac.kr   # 예시 주소
+office:
+  ko: ""                  # 예: E동 301호
+  en: ""
+bio:
+  ko: 기계학습과 인공지능을 연구합니다. 학생들과 함께 데이터에서 배우는 모델을 만들고, 그것을 실제 산업 문제에 적용하는 일에 관심이 많습니다.
+  en: I work on machine learning and artificial intelligence. Together with my students, I build models that learn from data and apply them to real industrial problems.
+
+# 바깥 링크 — url 이 비어 있으면 화면에 안 나온다
+links:
+  - label: Google Scholar
+    url: ""
+  - label: ORCID
+    url: ""
+  - label: CV
+    url: ""
+
+education:
+  - year: "20XX"
+    ko: 박사, 컴퓨터공학 (학교 이름)
+    en: Ph.D. in Computer Science (University)
+  - year: "20XX"
+    ko: 석사, 컴퓨터공학 (학교 이름)
+    en: M.S. in Computer Science (University)
+  - year: "20XX"
+    ko: 학사, 컴퓨터공학 (학교 이름)
+    en: B.S. in Computer Science (University)
+
+career:
+  - year: "20XX – 현재"
+    year_en: "20XX – Present"
+    ko: 교수, OO대학교
+    en: Professor, OO University
+  - year: "20XX – 20XX"
+    ko: 연구원 (기관 이름)
+    en: Researcher (Institution)

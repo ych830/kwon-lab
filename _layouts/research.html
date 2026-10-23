@@ -1,0 +1,40 @@
+---
+layout: page-hero
+---
+{%- assign lang = page.lang | default: "ko" -%}
+{%- assign t = site.data.i18n[lang] -%}
+<section class="section">
+  <div class="container">
+    <ol class="area-list">
+      {%- for area in site.data.research.areas %}
+      <li class="grid area-row{% assign odd = forloop.index | modulo: 2 %}{% if odd == 0 %} is-flip{% endif %}" id="area-{{ forloop.index }}">
+        {%- assign area_title = area.title[lang] %}
+        <div class="area-media">{% include media.html dir="research/" file=area.image alt=area_title %}</div>
+        <div class="area-text">
+          <p class="area-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</p>
+          <h2>{{ area.title[lang] }}</h2>
+          <p class="area-summary">{{ area.summary[lang] }}</p>
+          <p class="area-detail">{{ area.detail[lang] }}</p>
+          <ul class="tags">{% for k in area.keywords %}<li>{{ k }}</li>{% endfor %}</ul>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+{%- if site.data.research.projects.size > 0 %}
+<section class="band band-soft">
+  <div class="container grid">
+    <div class="col-12">{% include section-head.html en="PROJECTS" ko=t.research.projects_title %}</div>
+    <ul class="project-list">
+      {%- for pj in site.data.research.projects %}
+      <li>
+        <p class="project-title">{{ pj.title[lang] }}</p>
+        <p class="project-meta">{{ pj.funder[lang] }} · {{ pj.period }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+{%- endif %}

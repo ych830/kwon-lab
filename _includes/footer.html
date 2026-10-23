@@ -1,0 +1,13 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="logo footer-logo" href="{% include url.html ref='home' %}">{{ lab.short_name | upcase }}</a>
+    <p class="footer-sub">{{ lab.name[lang] }} · {{ lab.university[lang] }}{% if lab.department[lang] and lab.department[lang] != "" %} · {{ lab.department[lang] }}{% endif %}</p>
+    <ul class="footer-nav">
+      {%- for ref in site.data.navigation %}
+      <li><a href="{% include url.html ref=ref %}">{{ t.nav[ref] }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p class="footer-contact">{{ lab.address[lang] }}{% if lab.room[lang] and lab.room[lang] != "" %} {{ lab.room[lang] }}{% endif %}<span aria-hidden="true"> · </span><a href="mailto:{{ lab.email }}">{{ lab.email }}</a></p>
+    <p class="footer-copy">© {{ site.time | date: "%Y" }} {{ lab.short_name }}, {{ lab.university.en }}. All rights reserved.</p>
+  </div>
+</footer>

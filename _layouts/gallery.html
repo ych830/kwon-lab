@@ -1,0 +1,23 @@
+---
+layout: page-hero
+---
+{%- assign lang = page.lang | default: "ko" -%}
+{%- assign t = site.data.i18n[lang] -%}
+<section class="section">
+  <div class="container">
+    {%- assign photos = site.data.gallery | sort: "date" | reverse %}
+    <ul class="grid gallery-grid">
+      {%- for g in photos %}
+      <li class="col-3 gallery-item">
+        {%- if g.image and g.image != "" %}
+        <a class="gallery-photo" href="{{ '/assets/img/gallery/' | append: g.image | relative_url }}" target="_blank" rel="noopener">{% assign cap = g[lang] %}{% include media.html dir="gallery/" file=g.image alt=cap %}</a>
+        {%- else %}
+        <div class="gallery-photo">{% include media.html file="" %}</div>
+        {%- endif %}
+        <p class="gallery-cap">{{ g[lang] }}</p>
+        <time datetime="{{ g.date | date: '%Y-%m-%d' }}">{{ g.date | date: "%Y.%m.%d" }}</time>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+{%- comment -%} 가운데 정렬 구역 제목. 사용: {% include section-head.html en="RESEARCH" ko="연구 분야" more="research" %} {%- endcomment -%}
+<div class="section-head">
+  <p class="section-en" aria-hidden="true">{{ include.en }}</p>
+  <h2>{{ include.ko }}</h2>
+  {%- if include.more %}
+  <a class="link-arrow" href="{% include url.html ref=include.more %}">{{ t.more }} <span class="arrow" aria-hidden="true">→</span></a>
+  {%- endif %}
+</div>

@@ -1,0 +1,29 @@
+{%- assign alt_lang = "en" -%}
+{%- if lang == "en" %}{% assign alt_lang = "ko" %}{% endif -%}
+{%- assign alt_page = site.pages | where: "ref", page.ref | where: "lang", alt_lang | first -%}
+<div class="masthead">
+  <a class="logo" href="{% include url.html ref='home' %}">{{ lab.short_name | upcase }}</a>
+  <p class="masthead-sub">{{ lab.university[lang] }}</p>
+</div>
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a class="logo logo-sm" href="{% include url.html ref='home' %}">{{ lab.short_name | upcase }}</a>
+    <nav id="site-nav" class="site-nav">
+      <ul>
+        {%- for ref in site.data.navigation %}
+        <li><a href="{% include url.html ref=ref %}"{% if page.ref == ref %} aria-current="page"{% endif %}>{{ t.nav[ref] }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <div class="navbar-end">
+      {%- if alt_page %}
+      <a class="lang-switch" href="{{ alt_page.url | relative_url }}" hreflang="{{ alt_lang }}" aria-label="{% if alt_lang == 'en' %}English{% else %}한국어{% endif %}">
+        <span{% if lang == "ko" %} class="on"{% endif %}>KO</span><span{% if lang == "en" %} class="on"{% endif %}>EN</span>
+      </a>
+      {%- endif %}
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{{ t.menu }}">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

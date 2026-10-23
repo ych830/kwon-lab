@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- if lab.draft %}
+<meta name="robots" content="noindex, nofollow">{% comment %} 예시 내용일 때는 검색에 안 걸리게 한다 (lab.yml 의 draft: false 로 바꾸면 없어진다) {% endcomment %}
+{%- endif %}
+{%- if page.ref == "home" %}
+<title>{{ lab.name[lang] }} · {{ lab.university[lang] }}</title>
+{%- else %}
+<title>{{ t.nav[page.ref] }} · {{ lab.name[lang] }}</title>
+{%- endif %}
+<meta name="description" content="{{ lab.tagline[lang] | escape }}">
+<meta property="og:title" content="{{ lab.name[lang] | escape }}">
+<meta property="og:description" content="{{ lab.tagline[lang] | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{%- if page.ref %}
+{%- assign same_pages = site.pages | where: "ref", page.ref %}
+{%- for p in same_pages %}
+<link rel="alternate" hreflang="{{ p.lang }}" href="{{ p.url | absolute_url }}">
+{%- endfor %}
+{%- endif %}
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">

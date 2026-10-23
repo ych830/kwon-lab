@@ -1,0 +1,15 @@
+{%- comment -%} 소식 한 건. 사용: {% include news-item.html item=item card=true %} (card=true 면 홈 화면 카드 모양) {%- endcomment -%}
+{%- assign _item = include.item -%}
+<li class="{% if include.card %}col-4 news-card{% else %}grid news-row{% endif %}">
+  <div class="news-thumb{% unless include.card %} col-3{% endunless %}">
+    {%- if _item.image and _item.image != "" -%}
+    {%- assign _cap = _item[lang] -%}{% include media.html dir="news/" file=_item.image alt=_cap %}
+    {%- else -%}
+    <span class="news-noimg" aria-hidden="true"><span>NEWS</span><b>{{ _item.date | date: "%m.%d" }}</b></span>
+    {%- endif -%}
+  </div>
+  <div class="news-body{% unless include.card %} col-9{% endunless %}">
+    <time datetime="{{ _item.date | date: '%Y-%m-%d' }}">{{ _item.date | date: "%Y.%m.%d" }}</time>
+    <p>{% if _item.link and _item.link != "" %}<a href="{{ _item.link }}">{{ _item[lang] }}</a>{% else %}{{ _item[lang] }}{% endif %}</p>
+  </div>
+</li>

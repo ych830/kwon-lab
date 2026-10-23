@@ -1,0 +1,34 @@
+# 연구실 소식. 날짜순으로 자동 정렬된다(최신이 위). 홈 화면에는 최근 4개만 나온다.
+# 새 소식은 "- date:" 부터 한 덩어리를 복사해 맨 위에 붙인다.
+# date 는 반드시 2026-10-01 처럼 연-월-일 형식. link·image 는 비워도 된다.
+# image: assets/img/news/ 에 올린 사진 파일 이름. 홈 화면 소식 카드와 소식 페이지에 나온다.
+#
+# ※ 아래는 예시다.
+
+- date: 2026-10-15
+  ko: 홍길동 학생의 논문이 국제학술대회에 구두 발표(Oral)로 채택되었습니다.
+  en: Gildong Hong's paper was accepted as an oral presentation at an international conference.
+  link: ""
+  image: sample-1.svg
+
+- date: 2026-09-01
+  ko: 2027학년도 전기 석·박사과정 및 학부연구생을 모집합니다.
+  en: We are recruiting M.S./Ph.D. students and undergraduate interns for Spring 2027.
+  link: ""
+  image: sample-2.svg
+
+- date: 2026-07-20
+  ko: 산업 AI 관련 신규 연구과제를 시작했습니다.
+  en: We started a new research project on AI for industry.
+  link: ""
+  image: sample-3.svg
+
+- date: 2026-03-02
+  ko: 최유나, 정민호, 윤소희 학생이 연구실에 합류했습니다. 환영합니다!
+  en: Yuna Choi, Minho Jung, and Sohee Yoon joined the lab. Welcome!
+  link: ""
+
+- date: 2025-11-10
+  ko: 이서준 학생이 한국정보과학회 학술대회에서 우수논문상을 받았습니다.
+  en: Seojun Lee received the Best Paper Award at the KIISE conference.
+  link: ""

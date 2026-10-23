@@ -1,0 +1,7 @@
+# 머리말 메뉴 순서. 항목 이름(글자)은 _data/i18n.yml 의 nav 에 있다.
+- research
+- people
+- publications
+- news
+- gallery
+- join

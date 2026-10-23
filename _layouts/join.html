@@ -1,0 +1,60 @@
+---
+layout: page-hero
+---
+{%- assign lang = page.lang | default: "ko" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign lab = site.data.lab -%}
+{%- assign join = site.data.join -%}
+<section class="section">
+  <div class="container">
+    <p class="join-lead">{{ join.lead[lang] }}</p>
+
+    <div class="grid join-block">
+      <h2 class="join-head">{{ t.join.positions_title }}</h2>
+      <ul class="join-body position-list">
+        {%- for pos in join.positions %}
+        <li>
+          <h3>{{ pos.title[lang] }}</h3>
+          <p>{{ pos.desc[lang] }}</p>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <div class="grid join-block">
+      <h2 class="join-head">{{ t.join.looking_title }}</h2>
+      <ul class="join-body check-list">
+        {%- for item in join.looking_for %}<li>{{ item[lang] }}</li>{% endfor %}
+      </ul>
+    </div>
+
+    <div class="grid join-block">
+      <h2 class="join-head">{{ t.join.offer_title }}</h2>
+      <ul class="join-body check-list">
+        {%- for item in join.offer %}<li>{{ item[lang] }}</li>{% endfor %}
+      </ul>
+    </div>
+
+    <div class="grid join-block">
+      <h2 class="join-head">{{ t.join.apply_title }}</h2>
+      <ol class="join-body step-list">
+        {%- for step in join.apply %}
+        <li><span class="step-num">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><p>{{ step[lang] }}</p></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="band band-ink contact-band">
+  <div class="container">
+    <p class="contact-display" aria-hidden="true">CONTACT</p>
+    <h2>{{ t.join.contact_title }}</h2>
+    <a class="contact-mail" href="mailto:{{ lab.email }}">{{ lab.email }}</a>
+    <p class="contact-address">{{ lab.address[lang] }}{% if lab.room[lang] and lab.room[lang] != "" %} {{ lab.room[lang] }}{% endif %}</p>
+    <div class="contact-actions">
+      <a class="btn btn-brand" href="mailto:{{ lab.email }}">{{ t.join.mail_cta }}</a>
+      <a class="btn btn-line-light" href="https://www.google.com/maps/search/?api=1&amp;query={{ lab.address.en | url_encode }}">{{ t.join.map }} <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
