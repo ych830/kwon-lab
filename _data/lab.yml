@@ -10,8 +10,8 @@ name:
 short_name: OOO Lab    # 머리말 왼쪽 위에 나오는 이름
 
 # 홈 첫 화면을 꽉 채우는 큰 사진(교수님 학회 발표, 연구실 단체 사진 등). assets/img/ 에 올린 파일 이름.
-# 지금은 사진 자리를 보여 주는 예시 그림이다. 가로로 긴 사진(16:9, 가로 1920px 이상)이 잘 맞는다
-hero_image: sample-hero.svg
+# 지금은 확인용 실제 사진(얼굴·이름표 가림)이다. 가로로 긴 사진(가로 1920px 이상)이 잘 맞는다
+hero_image: hero-talk.jpg
 hero_caption:          # 사진 오른쪽 아래에 작게 나오는 설명. 비우면 안 나온다
   ko: 2026 국제학술대회 발표 (예시)
   en: Talk at an international conference, 2026 (example)

@@ -1,6 +1,6 @@
 # 연구 분야(areas)와 연구 과제(projects).
 # areas 는 홈 화면 카드와 연구(Research) 페이지에 같이 쓰인다. 3~4개가 보기 좋다.
-# image: assets/img/research/ 에 올린 그림 파일 이름 (지금은 예시 그림). 비우면 노란 자리 표시가 나온다.
+# image: assets/img/research/ 에 올린 그림 파일 이름 (지금은 AI 로 만든 예시 사진). 비우면 노란 자리 표시가 나온다.
 #
 # ※ 아래는 예시다. 실제 연구 분야로 바꿀 것.
 
@@ -15,7 +15,7 @@ areas:
       ko: 서로 다른 형태의 데이터를 하나의 표현 공간에서 다루는 방법을 연구합니다. 적은 데이터로도 잘 맞춰지는 시각-언어 모델과, 여러 감각 정보를 함께 쓰는 인식 모델을 만듭니다.
       en: We study how to handle different kinds of data in a shared representation space, building vision-language models that adapt with little data and perception models that combine multiple senses.
     keywords: [Vision-Language, Representation Learning, Foundation Models]
-    image: sample-1.svg
+    image: multimodal.jpg
 
   - title:
       ko: 효율적인 딥러닝
@@ -27,7 +27,7 @@ areas:
       ko: 모델 경량화, 지식 증류, 양자화로 성능은 지키면서 계산량을 줄이는 방법을 연구합니다. 연구 결과를 실제 임베디드 장비와 모바일 기기에 올려 검증합니다.
       en: We reduce computation while preserving accuracy through pruning, knowledge distillation, and quantization, and validate our methods on real embedded and mobile hardware.
     keywords: [Model Compression, On-Device AI, Quantization]
-    image: sample-2.svg
+    image: efficient.jpg
 
   - title:
       ko: 신뢰할 수 있는 AI
@@ -39,7 +39,7 @@ areas:
       ko: 데이터 분포가 바뀌어도 흔들리지 않는 학습 방법, 모델이 얼마나 확신하는지 알려 주는 불확실성 추정, 판단 근거를 보여 주는 설명 기법을 연구합니다.
       en: We work on learning methods that stay reliable under distribution shift, uncertainty estimation that tells how confident a model is, and explanation techniques that reveal the basis of its decisions.
     keywords: [Robustness, Uncertainty, Explainability]
-    image: sample-3.svg
+    image: trustworthy.jpg
 
   - title:
       ko: 산업 AI 응용
@@ -51,7 +51,7 @@ areas:
       ko: 기업과 함께 제조 공정의 이상 탐지, 품질 예측, 설비 고장 예측 문제를 풉니다. 현장에서 바로 쓸 수 있는 형태로 결과를 만드는 것을 목표로 합니다.
       en: Together with industry partners we tackle anomaly detection, quality prediction, and predictive maintenance, aiming for results that can be deployed on the factory floor.
     keywords: [Anomaly Detection, Time Series, Smart Manufacturing]
-    image: sample-4.svg
+    image: industry.jpg
 
 projects:
   - title:
