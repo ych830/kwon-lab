@@ -13,8 +13,8 @@ office:
   ko: ""                  # 예: E동 301호
   en: ""
 bio:
-  ko: 기계학습과 인공지능을 연구합니다. 학생들과 함께 데이터에서 배우는 모델을 만들고, 그것을 실제 산업 문제에 적용하는 일에 관심이 많습니다.
-  en: I work on machine learning and artificial intelligence. Together with my students, I build models that learn from data and apply them to real industrial problems.
+  ko: 경영정보시스템과 데이터 과학을 바탕으로, 인공지능이 기업과 금융의 의사결정을 돕는 방법을 연구합니다.
+  en: I study how AI can support decision-making in business and finance, building on management information systems and data science.
 
 # 바깥 링크 — url 이 비어 있으면 화면에 안 나온다
 links:

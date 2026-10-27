@@ -5,9 +5,9 @@
 draft: true
 
 name:
-  ko: OOO 연구실
-  en: OOO Lab
-short_name: OOO Lab    # 머리말 왼쪽 위에 나오는 이름
+  ko: 인공지능 의사결정 연구실
+  en: AI Decision-Making Lab   # 영문 이름 확인 필요
+short_name: AI Decision Lab   # 머리말 왼쪽 위에 나오는 이름
 
 # 홈 첫 화면을 꽉 채우는 큰 사진(교수님 학회 발표, 연구실 단체 사진 등). assets/img/ 에 올린 파일 이름.
 # 지금은 확인용 실제 사진(얼굴·이름표 가림)이다. 가로로 긴 사진(가로 1920px 이상)이 잘 맞는다
@@ -20,15 +20,15 @@ university:
   ko: OO대학교
   en: OO University
 department:            # 비워 두면 화면에 안 나온다
-  ko: ""
-  en: ""
+  ko: 경영학부
+  en: School of Business   # 영문 표기 확인 필요
 
 tagline:
-  ko: 사람과 산업에 실제로 쓰이는 인공지능을 연구합니다
-  en: Building AI that works in the real world
+  ko: 데이터와 인공지능으로 더 나은 의사결정을 연구합니다
+  en: Better decisions with data and AI
 intro:
-  ko: OOO 연구실은 OO대학교에서 기계학습과 인공지능을 연구합니다. 데이터에서 배우는 모델을 만들고, 그 모델이 현실의 문제를 풀도록 다듬는 일을 합니다.
-  en: OOO Lab at OO University studies machine learning and artificial intelligence. We build models that learn from data and refine them to solve real-world problems.
+  ko: 인공지능 의사결정 연구실은 OO대학교 경영학부에서 데이터 과학과 인공지능으로 기업과 금융의 의사결정을 돕는 방법을 연구합니다. 경영정보시스템, 금융 데이터 분석, 대규모 언어 모델을 함께 다룹니다.
+  en: The AI Decision-Making Lab at the OO University School of Business studies how data science and AI can support decisions in business and finance, spanning management information systems, financial analytics, and large language models.
 
 email: professor@university.ac.kr   # 대표 연락 메일 (예시 주소 — 실제 주소로 바꿀 것)
 address:

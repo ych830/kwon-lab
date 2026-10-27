@@ -2,68 +2,69 @@
 # areas 는 홈 화면 카드와 연구(Research) 페이지에 같이 쓰인다. 3~4개가 보기 좋다.
 # image: assets/img/research/ 에 올린 그림 파일 이름 (지금은 AI 로 만든 예시 사진). 비우면 노란 자리 표시가 나온다.
 #
-# ※ 아래는 예시다. 실제 연구 분야로 바꿀 것.
+# 연구 분야는 학교 교수진 페이지의 전문분야(경영정보시스템, 디지털 전환·프로세스 혁신, 데이터 과학·머신러닝)와
+# 연구 주제를 바탕으로 쓴 초안이다. 교수님 확인 후 다듬을 것. 연구 과제(projects)는 예시다.
 
 areas:
   - title:
-      ko: 멀티모달 학습
-      en: Multimodal Learning
+      ko: AI 기반 의사결정 지원
+      en: AI-Driven Decision Support
     summary:
-      ko: 이미지, 텍스트, 음성을 함께 이해하는 모델을 연구합니다.
-      en: Models that understand images, text, and speech together.
+      ko: 규칙 기반 지식과 기계학습을 결합해 상황에 맞게 판단을 돕는 의사결정 지원 시스템을 연구합니다.
+      en: Decision support systems that combine rule-based knowledge with machine learning to adapt to changing situations.
     detail:
-      ko: 서로 다른 형태의 데이터를 하나의 표현 공간에서 다루는 방법을 연구합니다. 적은 데이터로도 잘 맞춰지는 시각-언어 모델과, 여러 감각 정보를 함께 쓰는 인식 모델을 만듭니다.
-      en: We study how to handle different kinds of data in a shared representation space, building vision-language models that adapt with little data and perception models that combine multiple senses.
-    keywords: [Vision-Language, Representation Learning, Foundation Models]
-    image: multimodal.jpg
+      ko: 전문가의 판단 규칙과 딥러닝·강화학습 모델을 함께 쓰는 하이브리드 의사결정 지원 시스템을 만듭니다. 시장처럼 환경이 계속 바뀌는 곳에서 전략을 스스로 조정하는 방법을 연구합니다.
+      en: We build hybrid decision support systems that pair expert rules with deep learning and reinforcement learning, and study how strategies can adjust themselves in constantly changing environments such as financial markets.
+    keywords: [Decision Support Systems, Reinforcement Learning, Expert Systems]
+    image: decision-support.jpg
 
   - title:
-      ko: 효율적인 딥러닝
-      en: Efficient Deep Learning
+      ko: 금융 데이터 분석·예측
+      en: Financial Analytics & Forecasting
     summary:
-      ko: 작은 기기에서도 빠르게 동작하는 가벼운 모델을 만듭니다.
-      en: Lightweight models that run fast on small devices.
+      ko: 시계열 모델과 딥러닝으로 금융 시장의 움직임과 위험을 분석하고 예측합니다.
+      en: Analyzing and forecasting market movements and risk with time-series models and deep learning.
     detail:
-      ko: 모델 경량화, 지식 증류, 양자화로 성능은 지키면서 계산량을 줄이는 방법을 연구합니다. 연구 결과를 실제 임베디드 장비와 모바일 기기에 올려 검증합니다.
-      en: We reduce computation while preserving accuracy through pruning, knowledge distillation, and quantization, and validate our methods on real embedded and mobile hardware.
-    keywords: [Model Compression, On-Device AI, Quantization]
-    image: efficient.jpg
+      ko: 변동성 예측, 페어 트레이딩, 투자자 행동 분석처럼 금융 시장 데이터를 다룹니다. 전통적인 계량 모형과 딥러닝을 결합해 더 정확하고 해석할 수 있는 예측을 목표로 합니다.
+      en: We work with market data on problems such as volatility forecasting, pairs trading, and investor behavior, combining econometric models with deep learning for accurate and interpretable forecasts.
+    keywords: [Time Series, Volatility Forecasting, Deep Learning]
+    image: finance.jpg
 
   - title:
-      ko: 신뢰할 수 있는 AI
-      en: Trustworthy AI
+      ko: LLM 기반 시장 인사이트
+      en: LLMs for Market Insight
     summary:
-      ko: 예측을 믿고 쓸 수 있도록 견고하고 설명 가능한 AI를 연구합니다.
-      en: Robust and explainable AI whose predictions can be trusted.
+      ko: 뉴스 같은 텍스트 정보를 대규모 언어 모델로 정량화해 시장 예측에 활용합니다.
+      en: Quantifying text such as news with large language models for market prediction.
     detail:
-      ko: 데이터 분포가 바뀌어도 흔들리지 않는 학습 방법, 모델이 얼마나 확신하는지 알려 주는 불확실성 추정, 판단 근거를 보여 주는 설명 기법을 연구합니다.
-      en: We work on learning methods that stay reliable under distribution shift, uncertainty estimation that tells how confident a model is, and explanation techniques that reveal the basis of its decisions.
-    keywords: [Robustness, Uncertainty, Explainability]
-    image: trustworthy.jpg
+      ko: 숫자로 표현하기 어려운 정성 정보를 대규모 언어 모델(LLM)로 요약·정량화하고, 여러 AI 에이전트가 역할을 나눠 정보를 모으고 분석하는 구조를 연구합니다.
+      en: We use large language models to summarize and quantify qualitative information that is hard to express in numbers, and study pipelines in which AI agents divide the work of collecting and analyzing information.
+    keywords: [Large Language Models, AI Agents, Text Analytics]
+    image: llm-news.jpg
 
   - title:
-      ko: 산업 AI 응용
-      en: AI for Industry
+      ko: 디지털 전환·프로세스 혁신
+      en: Digital Transformation & Process Innovation
     summary:
-      ko: 제조·공정 데이터에 AI를 적용해 현장의 문제를 풉니다.
-      en: Applying AI to manufacturing and process data to solve real problems.
+      ko: 경영정보시스템 관점에서 기업의 디지털 전환과 업무 프로세스 혁신을 연구합니다.
+      en: Digital transformation and process innovation from a management information systems perspective.
     detail:
-      ko: 기업과 함께 제조 공정의 이상 탐지, 품질 예측, 설비 고장 예측 문제를 풉니다. 현장에서 바로 쓸 수 있는 형태로 결과를 만드는 것을 목표로 합니다.
-      en: Together with industry partners we tackle anomaly detection, quality prediction, and predictive maintenance, aiming for results that can be deployed on the factory floor.
-    keywords: [Anomaly Detection, Time Series, Smart Manufacturing]
-    image: industry.jpg
+      ko: 제조·서비스 기업의 업무 프로세스를 분석하고, ERP·자동화·데이터 기반 운영으로 바꾸어 가는 방법을 연구합니다. 현장에 바로 적용할 수 있는 결과를 지향합니다.
+      en: We analyze business processes in manufacturing and service firms and study how to transform them through ERP, automation, and data-driven operations, aiming for results that can be applied in practice.
+    keywords: [Management Information Systems, ERP, Process Innovation]
+    image: digital-transformation.jpg
 
 projects:
   - title:
-      ko: 제조 공정 이상 탐지를 위한 설명 가능한 AI 기술 개발 (예시)
-      en: Explainable AI for Anomaly Detection in Manufacturing (example)
+      ko: 강화학습 기반 적응형 투자 의사결정 지원 시스템 (예시)
+      en: Adaptive investment decision support with reinforcement learning (example)
     funder:
       ko: 정부 지원 연구과제
       en: Government-funded research project
     period: 2026 – 2029
   - title:
-      ko: 온디바이스 멀티모달 모델 경량화 연구 (예시)
-      en: Compressing Multimodal Models for On-Device AI (example)
+      ko: LLM 에이전트를 활용한 금융 뉴스 분석 (예시)
+      en: Financial news analysis with LLM agents (example)
     funder:
       ko: 산학협력 과제
       en: Industry collaboration

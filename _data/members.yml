@@ -14,8 +14,8 @@
   email: ""
   homepage: ""
   interests:
-    ko: 멀티모달 학습, 시각-언어 모델
-    en: Multimodal learning, vision-language models
+    ko: 강화학습 기반 투자 전략
+    en: Reinforcement learning for trading strategies
 
 - name:
     ko: 김하늘
@@ -26,8 +26,8 @@
   email: ""
   homepage: ""
   interests:
-    ko: 효율적인 딥러닝, 모델 경량화
-    en: Efficient deep learning, model compression
+    ko: 금융 시계열·변동성 예측
+    en: Financial time series and volatility forecasting
 
 - name:
     ko: 이서준
@@ -38,8 +38,8 @@
   email: ""
   homepage: ""
   interests:
-    ko: 제조 데이터 이상 탐지
-    en: Anomaly detection in manufacturing data
+    ko: LLM 기반 뉴스 분석
+    en: LLM-based news analytics
 
 - name:
     ko: 박지민
@@ -50,8 +50,8 @@
   email: ""
   homepage: ""
   interests:
-    ko: 신뢰할 수 있는 AI, 불확실성 추정
-    en: Trustworthy AI, uncertainty estimation
+    ko: 의사결정 지원 시스템
+    en: Decision support systems
 
 - name:
     ko: 최유나
@@ -62,8 +62,8 @@
   email: ""
   homepage: ""
   interests:
-    ko: 대규모 언어 모델 응용
-    en: Applications of large language models
+    ko: 디지털 전환·프로세스 분석
+    en: Digital transformation and process analytics
 
 - name:
     ko: 정민호
@@ -74,8 +74,8 @@
   email: ""
   homepage: ""
   interests:
-    ko: 컴퓨터 비전
-    en: Computer vision
+    ko: 데이터 시각화
+    en: Data visualization
 
 - name:
     ko: 윤소희
@@ -86,8 +86,8 @@
   email: ""
   homepage: ""
   interests:
-    ko: 강화학습
-    en: Reinforcement learning
+    ko: 마케팅 애널리틱스
+    en: Marketing analytics
 
 - name:
     ko: 강도윤
