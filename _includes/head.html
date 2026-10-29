@@ -18,7 +18,11 @@
 <link rel="alternate" hreflang="{{ p.lang }}" href="{{ p.url | absolute_url }}">
 {%- endfor %}
 {%- endif %}
+{%- if site.color == "black" or site.color == "blue" %}
+<link rel="icon" href="{{ '/assets/img/favicon-' | append: site.color | append: '.svg' | relative_url }}" type="image/svg+xml">
+{%- else %}
 <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+{%- endif %}
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

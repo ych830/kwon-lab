@@ -22,7 +22,8 @@ OO대학교 경영학부 OOO 교수의 인공지능 의사결정 연구실 홈�
 | 학생 모집 페이지 | `_data/join.yml` |
 | 메뉴 이름·버튼 글자 | `_data/i18n.yml` |
 | 홈 첫 화면 큰 사진과 설명 | `_data/lab.yml` 의 `hero_image`, `hero_caption` |
-| 색깔 | `assets/css/site.css` 맨 위 `:root` (Figma 의 '색' 변수와 이름이 같다) |
+| 대표 색 고르기 (노랑·검정·파랑) | `_config.yml` 의 `color` |
+| 색 값 자체 | `assets/css/site.css` 맨 위 `:root` (Figma 의 '색' 변수와 이름이 같다), 검정·파랑은 그 아래 `data-color` 블록 |
 
 각 파일 맨 위에 쓰는 법이 적혀 있다. `ko:` 아래는 한국어 화면, `en:` 아래는 영어 화면에 나온다.
 
@@ -84,13 +85,28 @@ OO대학교 경영학부 OOO 교수의 인공지능 의사결정 연구실 홈�
 - Figma 는 한국어를 글자 단위로 줄바꿈해서 문단 일부가 단어 중간에서 줄이 바뀐다. 실제 사이트는 단어 단위로 바뀐다.
 - Figma 를 고쳐도 사이트는 자동으로 바뀌지 않는다. 고친 화면 링크를 주고 반영해 달라고 하면 코드에 옮긴다.
 
+## 색 버전 비교 (노랑·검정·파랑)
+
+같은 사이트를 색만 바꿔 세 주소에 올려 두었다. 내용은 하나라서 어느 파일을 고쳐도 세 버전에 함께 반영된다.
+
+| 색 | 주소 |
+|---|---|
+| 노랑 (기본) | https://ych830.github.io/kwon-lab/ |
+| 검정 | https://ych830.github.io/kwon-lab/black/ |
+| 파랑 | https://ych830.github.io/kwon-lab/blue/ |
+
+색을 하나로 정하면:
+
+1. `_config.yml` 의 `color:` 를 고른 색(`yellow`, `black`, `blue`)으로 바꾼다. 기본 주소가 그 색이 된다.
+2. `.github/workflows/pages.yml` 에서 **Build color versions** 단계(비교용)를 지운다. `/black/`, `/blue/` 주소가 없어진다.
+
 ## 처음 한 번: 사이트 공개 설정
 
 1. 저장소 **Settings → Pages** 로 간다.
-2. **Build and deployment → Source** 를 **Deploy from a branch**, Branch 를 **main / (root)** 로 고르고 **Save**.
+2. **Build and deployment → Source** 를 **GitHub Actions** 로 고른다. (`.github/workflows/pages.yml` 이 사이트를 만들어 올린다)
 3. 몇 분 뒤 https://ych830.github.io/kwon-lab/ 에서 열린다.
 
-**현재 상태 (2026-10-23):** 이 저장소는 공개(public)이고 Pages 가 켜져 있다. GitHub 무료 계정은 공개 저장소에서만 Pages 를 쓸 수 있기 때문이다. 공개 전까지의 작업 기록은 비공개 저장소 `ych830/kwon-lab-backup` 에 그대로 있다.
+**현재 상태 (2026-10-29):** 이 저장소는 공개(public)이고 Pages 가 켜져 있다. Source 는 색 버전 세 개를 한 번에 올리려고 2026-10-29 에 Deploy from a branch 에서 GitHub Actions 로 바꿨다. GitHub 무료 계정은 공개 저장소에서만 Pages 를 쓸 수 있기 때문에 공개 저장소다. 공개 전까지의 작업 기록은 비공개 저장소 `ych830/kwon-lab-backup` 에 그대로 있다.
 
 **예시 기간:** `_data/lab.yml` 의 `draft: true` 동안은 모든 페이지에 검색 차단 표시(noindex)가 붙는다. 실제 내용으로 바꾸고 `draft: false` 로 하면 검색에 나온다.
 
@@ -113,7 +129,8 @@ bundle exec jekyll serve --livereload
 ## 폴더 구조
 
 ```
-_config.yml        사이트 설정 (주소, baseurl)
+_config.yml        사이트 설정 (주소, baseurl, 대표 색)
+.github/workflows/pages.yml   사이트를 만들어 GitHub Pages 에 올리는 자동 작업 (색 비교용 /black/·/blue/ 포함)
 _data/             ← 내용은 전부 여기
 _layouts/          페이지 틀 (home, research, people, publications, news, gallery, join)
 _includes/         공통 조각 (머리말, 바닥글, 논문 한 줄, 사진 등)

@@ -2,7 +2,7 @@
 {%- assign t = site.data.i18n[lang] -%}
 {%- assign lab = site.data.lab -%}
 <!doctype html>
-<html lang="{{ lang }}">
+<html lang="{{ lang }}" data-color="{{ site.color | default: 'yellow' }}">
 <head>
 {% include head.html %}
 </head>

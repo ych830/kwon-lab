@@ -6,6 +6,11 @@ url: "https://ych830.github.io"
 baseurl: "/kwon-lab"   # 주소 뒤 경로. 독자 도메인(예: lab.university.ac.kr)을 연결하면 "" 로 바꾼다.
 timezone: Asia/Seoul
 
+# 대표 색: yellow(노랑), black(검정), blue(파랑) 중 하나.
+# 지금은 비교용으로 세 가지를 함께 올린다 — 이 주소가 노랑, /black/ 이 검정, /blue/ 가 파랑이다
+# (.github/workflows/pages.yml). 색을 하나로 정하면 여기 값을 바꾸고 그 파일의 비교용 단계를 지운다.
+color: yellow
+
 plugins:
   - jekyll-sitemap
 

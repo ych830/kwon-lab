@@ -1,0 +1,62 @@
+# 사이트를 만들어 GitHub Pages 에 올린다. main 에 저장(커밋)할 때마다 자동으로 돈다 (1~2분).
+# GitHub 공식 Jekyll 예시(actions/starter-workflows pages/jekyll.yml)에 색 비교용 빌드만 더했다.
+name: Deploy site to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
+        uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+          cache-version: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        # 기본 색(_config.yml 의 color) 사이트를 주소 그대로에 만든다
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        env:
+          JEKYLL_ENV: production
+      - name: Build color versions
+        # 비교용: 같은 사이트를 검정은 /black/, 파랑은 /blue/ 에 하나씩 더 만든다. 색을 정하면 이 단계를 지운다
+        run: |
+          for color in black blue; do
+            echo "color: $color" > "$RUNNER_TEMP/$color.yml"
+            bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/$color" \
+              --config "_config.yml,$RUNNER_TEMP/$color.yml" -d "_site/$color"
+          done
+        env:
+          JEKYLL_ENV: production
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
